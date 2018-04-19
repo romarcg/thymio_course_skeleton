@@ -1,4 +1,4 @@
-# Skeleton files to bring up gazebo and the Mighty Thymio model
+## Skeleton files to bring up gazebo and the Mighty Thymio model
 
 Add and install the `thymio_course_skeleton` package to your `your_catkin_workspace`:
 
@@ -8,7 +8,7 @@ git clone https://github.com/romarcg/thymio_course_skeleton.git
 catkin build
 ```
 
-Refer to the launch files in `launch` folder to:
+### Refer to the launch files in `launch` folder to:
 
 1. Bring up gazebo and the MyT's model. You must name your simulated MyT with the `name` parameter, e.g. `thymio10`. In addition you must indicate a `world` to simulate:
 
@@ -31,7 +31,7 @@ roslaunch thymio_course_skeleton thymio_rviz.launch name:=thymio10
 > the chosen name, e.g. `/thymio10/odom`
 
 
-Refer to the skeleton rospy node to:
+### Refer to the skeleton rospy node to:
 
 Perform basic interfacing tasks:
 * A simple controller that sets constant velocities by publishing `cmd_vel` messages.
