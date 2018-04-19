@@ -97,7 +97,7 @@ This package includes:
 
 ## Homework assignment
 
-> Disclaimer: This homework assignment will be graded.
+> Disclaimer: This homework assignment **will be graded**.
 
 
 (**compulsory**) With Gazebo and the simulated MyT:
@@ -106,7 +106,7 @@ This package includes:
 
 2. Using the `wall` world file write a controller to move the MyT towards a wall somewhere in front of it; the wall is not necessarily orthogonal to the direction the MyT is originally pointing to.  Write a contrexcersieoller in such a way that the MyT moves straight ahead until it is close to the wall (without hitting the wall), then turns in such a way to face the wall.
 
-3. Using the controller built in *task 2*, once the MyT arrives close to the wall, it  now turns in such a way that it is facing opposite to the wall, then moves in such a way that its reference frame (i.e. `base_link` from `tf` tree) is as close as possible to 2 meters from the wall.
+3. Using the controller built in *task 2*, once the MyT arrives close to the wall, it  now turns in such a way that it is facing opposite to the wall, then moves in such a way that its reference frame (i.e. `base_link` in `tf` tree) is as close as possible to 2 meters from the wall.
 
 For *task 1* we request (in addition to the code) an `rviz` snapshot of the `odometry visualization` trace.
 
@@ -123,6 +123,6 @@ In addition, test your controller with the real MyT facing orthogonally to the m
 
 ### Submission
 
-> **Note:** You can do the homework assignment in pairs.
+> **Note:** You can do this homework assignment in pairs.
 
 Please submit the archive of the package folder to `iCorsi` by **deadline-to-be-defined** , named in the following way: `firstname1.lastname1-firstname2.lastname2.zip`.
