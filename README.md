@@ -1,6 +1,6 @@
 # Skeleton files to bring up gazebo and the Mighty Thymio model
 
-Add and install the `thymio_course_skeleton` package to your `your_catkin_workspace`: 
+Add and install the `thymio_course_skeleton` package to your `your_catkin_workspace`:
 
 ```
 cd <your_catkin_workspace>/src
@@ -16,7 +16,7 @@ Refer to the launch files in `launch` folder to:
 roslaunch thymio_course_skeleton thymio_gazebo_bringup.launch name:=thymio10 world:=empty
 ```
 
-Examples of world definitions are stored in `.world` files in `launch/worlds/`. Two worlds are included, one `empty` with a large plane and another with a large plane and a `wall`. 
+Examples of world definitions are stored in `.world` files in `launch/worlds/`. Two worlds are included, one `empty` with a large plane and another with a large plane and a `wall`.
 
 > If you want to modify the MyT's `spawing` pose, explore `thymio_gazebo_bringup.launch` file.
 
@@ -27,7 +27,7 @@ Examples of world definitions are stored in `.world` files in `launch/worlds/`. 
 roslaunch thymio_course_skeleton thymio_rviz.launch name:=thymio10
 ```
 
-> All topic names from the simulated MyT have as prefix 
+> All topic names from the simulated MyT have as prefix
 > the chosen name, e.g. `/thymio10/odom`
 
 
