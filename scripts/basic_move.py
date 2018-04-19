@@ -110,8 +110,8 @@ if __name__ == '__main__':
     # NOTE: The goal of this step is *only* to show the available
     # tools. The launch file process should take care of initializing
     # the simulation and spawning the respective models
-
-    thymio.thymio_state_service_request([0.,0.,0.], [0.,0.,0.])
-    rospy.sleep(1.)
+    
+    #thymio.thymio_state_service_request([0.,0.,0.], [0.,0.,0.])
+    #rospy.sleep(1.)
 
     thymio.basic_move()
