@@ -1,20 +1,8 @@
----
-layout: standalone
-title: Robotics, USI (spring 2018), ROS Exercise 2
-permalink: /robotics2018/ros-exercie-2.html
-
-unlisted: true
-
----
-
-Revision: **1**, Last modified: **{{ page.last_modified_at | date_to_rfc822 }}**
-
-
 ## Mighty Thymio platform
 
-> [Thymio](https://www.thymio.org/home-en:home) is a small, inexpensive, mass-produced mobile robot with widespread use in primary and secondary education. In order to make it more versatile and effectively use it in later educational stages, including university levels, we have expanded Thymio's capabilities by adding off-the-shelf hardware and open software components. The resulting robot, that we call Mighty Thymio MyT, provides additional sensing functionalities, increased computing power, networking, and full ROS integration. We provide a [publication and source code](https://github.com/jeguzzi/mighty-thymio) detailing MyT's architecture and applications in advance educational activities.
+[Thymio](https://www.thymio.org/home-en:home) is a small, inexpensive, mass-produced mobile robot with widespread use in primary and secondary education. In order to make it more versatile and effectively use it in later educational stages, including university levels, we have expanded Thymio's capabilities by adding off-the-shelf hardware and open software components. The resulting robot, that we call **Mighty Thymio** (MyT), provides additional sensing functionalities, increased computing power, networking, and full ROS integration. We provide a [publication and source code](https://github.com/jeguzzi/mighty-thymio) detailing MyT's architecture and applications in advance educational activities.
 
-The following are the most important parameters for the controlling the (real) robot:
+The following are the most important parameters of the (real) MyT:
 
 * base
 
@@ -41,7 +29,7 @@ The following are the most important parameters for the controlling the (real) r
 
 * camera
 
-  The camera is mounted on a tiltable joint (downward pitch is positive) with
+  The camera is mounted on a tilt-able joint (downward pitch is positive) with
 
   - min pitch: -0.34 rad
   - max pitch: 1.3 rad
@@ -49,7 +37,7 @@ The following are the most important parameters for the controlling the (real) r
 
 ## Gazebo
 
-[Gazebo](http://gazebosim.org/) provides robot simulation, as many other simulators, was designed to evaluate algorithms for robots without depending on the real robot. In many applications it is essential to test robot modules, such as error handling, resource management, perception, localization, navigation and grasping. 
+[Gazebo](http://gazebosim.org/) provides robot simulation, as many other simulators, was designed to evaluate algorithms for robots without depending on the real robot. In many applications it is essential to test robot modules, such as error handling, resource management, perception, localization, navigation and grasping.
 Some advantages of gazebo include:
 
 * Test *realistic* interactions (powered by physics engines)
@@ -61,8 +49,8 @@ Some advantages of gazebo include:
 
 `gazebo_ros_pkgs` is a set of ROS packages that provide the necessary interfaces to simulate a robot in the Gazebo 3D rigid body simulator for robots (for more [details](http://gazebosim.org/tutorials?cat=connect_ros) ). It integrates with ROS using:
 
-* ROS messages 
-* services 
+* ROS messages
+* services
 * dynamic reconfigure
 
 ## Gazebo model of Mighty Thymio
@@ -84,8 +72,8 @@ controller                                      camera pitch
 
 As we use messages and services to communicate, we can employ all tools from ROS ecosystem.
 
-> In theory, once we are satisfied with the performance of our modules 
-> running in simulation we could directly apply them to the real robot. 
+> In theory, once we are satisfied with the performance of our modules
+> running in simulation we could directly apply them to the real robot.
 > In practice, as you will see, tweaks need to be done.
 
 For detailed information regarding the robot model (geometrical and physical properties) visit [this website](https://github.com/jeguzzi/mighty-thymio/blob/master/client.md#robot-parameters)
@@ -102,7 +90,7 @@ Be aware that the example for `Teleoperate the robot with a joypad` needs a joyp
 Download `thymio_course_skeleton` [package](https://github.com/romarcg/thymio_course_skeleton) for a first glance at how to interact with simulated MyT.
 
 This package includes:
-1. Launch files to bring up gazebo simulator and MyT model. 
+1. Launch files to bring up gazebo simulator and MyT model.
 2. Launch files to visualize MyT topics in `rviz`.
 3. A basic skeleton python script to interact with the simulated MyT.
 4. Extra resources needed for the homework assignment.
@@ -120,7 +108,7 @@ This package includes:
 
 3. Using the controller built in *task 2*, once the MyT arrives close to the wall, it  now turns in such a way that it is facing opposite to the wall, then moves in such a way that its reference frame (i.e. `base_link` from `tf` tree) is as close as possible to 2 meters from the wall.
 
-For *task 1* we request (in addition to the code) an `rviz` snapshot of the `odometry visualization` trace. 
+For *task 1* we request (in addition to the code) an `rviz` snapshot of the `odometry visualization` trace.
 
 *Tasks 2 and 3* require the use of the proximity sensors. Using this information, feel free to define a *close to the wall* distance threshold.
 
@@ -129,7 +117,7 @@ For *task 1* we request (in addition to the code) an `rviz` snapshot of the `odo
 4. Test *task 1* on a real flat surface. How does the resulting trajectory compare to the one from simulation?
 
 5. Test *task 2* against a generic wall-like obstacle (e.g. a wall). How *close to the wall* to the wall does the real MyT get?
-In addition, test your controller with the real MyT facing orthogonally to the midpoint of a *B&W wall-like* (half black,  half white). 
+In addition, test your controller with the real MyT facing orthogonally to the midpoint of a *B&W wall-like* (half black,  half white).
 
 *Tasks 4 and 5* could require tuning of parameters to improve the performance of the controllers. We encourage to compare the performance of the controllers with (if needed) and without tuning. In addition to the code, we request a short animation (e.g. video, GIF) of the real MyT while executing *tasks 4 and 5*. Bare in mind the size of the animation file.
 
@@ -137,6 +125,4 @@ In addition, test your controller with the real MyT facing orthogonally to the m
 
 > **Note:** You can do the homework assignment in pairs.
 
-Please submit the archive of the package folder to `iCorsi` by **deadline** , named in the following way: `firstname1.lastname1-firstname2.lastname2.zip`.
-
-
+Please submit the archive of the package folder to `iCorsi` by **deadline-to-be-defined** , named in the following way: `firstname1.lastname1-firstname2.lastname2.zip`.
