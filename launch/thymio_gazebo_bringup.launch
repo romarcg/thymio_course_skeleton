@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-  <env name="GAZEBO_MODEL_PATH" value="$(find thymio_description)/..:$(find thymioid_description)/..:$(optenv GAZEBO_MODEL_PATH)" />
+  <env name="GAZEBO_MODEL_PATH" value="$(find thymio_description)/..:$(find thymioid_description)/..:$(find thymio_course_skeleton):$(optenv GAZEBO_MODEL_PATH)" />
   <env name="SVGA_VGPU10" value="0"/>
   <arg name="gui" default="true"/>
   <arg name="name" default=""/>
@@ -10,15 +10,31 @@
   <include file="$(find thymio_course_skeleton)/launch/custom_world.launch">
     <arg name="gui" value="$(arg gui)"/>
     <arg name="headless" value="$(eval not arg('gui'))"/>
-    <arg name="paused" value="true"/>
+    <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
-    <arg name="world_name" value="$(find thymio_course_skeleton)/launch/worlds/$(arg world).world"/>
+    <arg name="world" value="$(arg world)"/>
   </include>
 
   <include file="$(find thymioid_description)/launch/gazebo_bringup.launch">
     <arg name="name" value="$(arg name)"/>
+
     <arg name="pose" value="-x 0 -y 0 -z 0"/>
-    <arg name="camera_is_fixed" value="false"/>
+    <arg name="odom_max_rate" default="20.0"/>
+
+    <arg name="publish_ground_truth" default="true"/>
+    <arg name="ground_truth_frame_id" default="/world"/>
+    <arg name="ground_truth_frame_rate" default="30.0"/>
+
+    <arg name="left_wheel_friction" value="1"/>
+    <arg name="right_wheel_friction" value="1"/>
+
+    <arg name="camera_is_fixed" default="false"/>
+    <arg name="camera_pitch" default="0.2618"/>
+
+    <arg name="proximity_max_range" default="0.12"/>
+    <arg name="proximity_resolution" default="0.005"/>
+    <arg name="proximity_fov" default="0.3"/>
+
   </include>
 
   <!-- <include file="$(find thymioid_description)/launch/gazebo_bringup.launch">
