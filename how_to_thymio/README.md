@@ -16,10 +16,11 @@ What is included?
 
 ### Steps to assemble the MyT
 
-> Before assembling **verify** that printed number on the base, wifi antenna and main computer are the same.
+> Before starting assembling **verify** that the printed number on the base, wifi antenna and main computer are the same.
 
-1. Pull of the parts from the box.
-> If the support blocks are detached, follow the images in the appendices section to put them back together. **Do not** continue with the assembling process until the support blocks are properly connected.
+1. Carefully pull off the parts from the box.
+
+> If the support blocks are detached, follow the images in the [appendices](#appendices) section to put them back together. **Do not** continue with the assembling process until the support blocks are properly connected.
 
 2. Mount the computer block on top of the Thymio base:
 
@@ -92,7 +93,7 @@ To change the network mode:
 
 1. Press and hold the `right` arrow until an orange indicator appears. 
 2. Press the `left` arrow to select a mode (down off, down-left AP, left . 
-3. Press the middle button to confirm the selection.
+3. Press the `middle` button to confirm the selection.
 
 ## Turn off:
 
@@ -101,18 +102,21 @@ To change the network mode:
 To properly turn-off the MyT:
 
 1. Press and hold the `back` arrow (about 5s) until a sound triggers. This will start the shutdown process of both the base and the main computer.
-2. Wait until the MyT base restarts (another short sound). This will be an indication that the main computer has turned-down correctly. Additionally, only the red led on top of the main computer will be on, the blue one will be off.
-> As the base restarted there will be lights on 
-3. At this point turn down main switch of the main computer.
-4. Press and hold the middle button on the base until the base is switch off. A sound will trigger and the lights will turn off.
+2. Wait until the base restarts (there will be a short sound). This will be an indication that the main computer has turned-down correctly. Additionally, verify that only the red led on top of the main computer is on, the blue one should be off.
+> As the base has restarted lights should be on (this is normal).
+3. At this point turn down the main switch of the main computer.
+4. Press and hold the middle button on the base until this is switched off. A sound will trigger and the lights will turn off.
 
 
 ## Update software in thymio (ONLY FOR INTERNAL DEVELOPMENT):
--- connect to drone_wifi, or an ethernet in AP mode
--- hold LEFT ARROW (5 sec, no blink or sound)
--- it will take about 3min, no feedback (be aware)
 
-## Appendices
+> This process is only for internal development **do not** use it unless it is explicitly requested.
+
+1. Switch to managed mode or connect an Ethernet wire to the MyT while in AP mode.
+2. Press and hold `left` arrow for 6 seconds (there will not be any sound or light feedback). 
+3. Updating process will take about 2min. When the updating process is finished, the MyT will restart.
+
+## <a name="appendices"></a>Appendices
 
 Different views of the support blocks 
 
