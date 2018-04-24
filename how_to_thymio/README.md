@@ -9,9 +9,9 @@ What is included?
 1. Thymio base
 2. Main computer block compose of:
 
-  a. computer section
-  b. connection wires
-  c. support blocks (lego pieces)
+ a. computer section 
+ b. connection wires 
+ c. support blocks (lego pieces)
 
 3. Battery pack 
 4. Wireless antenna 
@@ -57,12 +57,15 @@ Once the MyT is assembled, a led on top of the switch in main computer will turn
 Follow these steps to bring up the MyT:
 
 1. Turn up the switch on the right of the main computer. 
-  a. Two leds on top of the main computer will turn on and a sound will trigger. Red led indicates the switch is up, blue led indicates the computer is *working*.
+
+ > Two leds on top of the main computer will turn on and a sound will trigger. Red led indicates the switch is up, blue led indicates the computer is *working*.
+ 
 2. Wait until the `back` arrow on the base starts to blink red.
+
   a. Once it is blinking it means ROS system inside the MyT is ready.
   b. If there is no blinking, something went wrong (see fix for corruption error)
 
-> There is one led on each bottom-side of the base. If the leds are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources critically low.
+> There three body leds ( one at the top and two at the sides). If the LEDs are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources critically low.
 
 ## Connect to the real MyT
 
@@ -81,7 +84,7 @@ Each MyT creates its own access point (AP) with the name `thymioX`, where `X` is
 
 ## Change network mode:
 
-MyT has three network modes, off, AP (default) and custom. Custom mode will connect to a predefined access point named.
+MyT has three network modes, off, AP (default) and managed. managed mode will connect to a predefined access point named.
 > Internet connection is not present in AP mode. If internet connection is needed while in AP mode, an Ethernet cable (with internet connection) must be attached to the main computer.
 > Custom mode should only be used when the predefined access point is present.
 
