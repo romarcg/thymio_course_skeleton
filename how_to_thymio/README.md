@@ -9,9 +9,9 @@ What is included?
 1. Thymio base
 2. Main computer block compose of:
 
-  a. computer section 
-  b. connection wires 
-  c. support blocks (lego pieces)
+   a. computer section 
+   b. connection wires 
+   c. support blocks (lego pieces)
 
 3. Battery pack 
 4. Wireless antenna 
