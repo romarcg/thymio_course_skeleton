@@ -6,15 +6,17 @@ What is included?
 
 ![MyT package](whats_included.png)
 
-1. Thymio base
-2. Main computer block compose of:
+1 Thymio base
+2 Main computer block compose of:
 
-   a. computer section 
-   b. connection wires 
-   c. support blocks (lego pieces)
+   a Computer section 
+   
+   b Connection wires 
+   
+   c Support blocks (lego pieces)
 
-3. Battery pack 
-4. Wireless antenna 
+3 Battery pack 
+4 Wireless antenna 
 
 ### Steps to assemble the MyT
 
