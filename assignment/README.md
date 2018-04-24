@@ -1,6 +1,6 @@
 ## Mighty Thymio platform
 
-[Thymio](https://www.thymio.org/home-en:home) is a small, inexpensive, mass-produced mobile robot with widespread use in primary and secondary education. In order to make it more versatile and effectively use it in later educational stages, including university levels, we have expanded Thymio's capabilities by adding off-the-shelf hardware and open software components. The resulting robot, that we call **Mighty Thymio** (MyT), provides additional sensing functionalities, increased computing power, networking, and full ROS integration. We provide a [publication and source code](https://github.com/jeguzzi/mighty-thymio) detailing MyT's architecture and applications in advance educational activities.
+[Thymio](https://www.thymio.org/home-en:home) is a small, inexpensive, mass-produced mobile robot with widespread use in primary and secondary education. In order to make it more versatile and effectively use it in later educational stages, including university levels, we have expanded Thymio's capabilities by adding off-the-shelf hardware and open software components. The resulting robot, that we call **Mighty Thymio** (MyT), provides additional sensing functionalities, increased computing power, networking, and full ROS integration.  We provide a [publication and source code](https://github.com/jeguzzi/mighty-thymio) detailing MyT's architecture and applications in advanced educational activities.
 
 The following are the most important parameters of the (real) MyT:
 
@@ -37,12 +37,12 @@ The following are the most important parameters of the (real) MyT:
 
 ## Gazebo
 
-[Gazebo](http://gazebosim.org/) provides robot simulation, as many other simulators, was designed to evaluate algorithms for robots without depending on the real robot. In many applications it is essential to test robot modules, such as error handling, resource management, perception, localization, navigation and grasping.
+[Gazebo](http://gazebosim.org/) is a robot simulator. Simulators are used in robotics for many reasons, one of which is to evaluate algorithms without depending on the real robot or on the specific environment. In many applications it is essential to test robot capabilities, such as error handling, resource management, perception, localization, navigation and grasping.
 Some advantages of gazebo include:
 
-* Test *realistic* interactions (powered by physics engines)
+* Simulate *realistic* physical interactions (powered by physics engines)
 * Design robots or import existing models
-* Rapidly test algorithms (without fearing breaking something the first try)
+* Rapidly test algorithms (if your robot breaks at the first try, no big deal)
 * Generate testing indoor or outdoor scenarios (`worlds`)
 
 ## ROS + Gazebo
@@ -66,7 +66,7 @@ and robot                                       such as proximity, camera, IMU
                             topics,
                             services
 
-Low lever                   <=====              Command velocities (v, w),
+Low lever                   <=====              Command velocities (v, omega),
 controller                                      camera pitch
 ```
 
@@ -74,7 +74,7 @@ As we use messages and services to communicate, we can employ all tools from ROS
 
 > In theory, once we are satisfied with the performance of our modules
 > running in simulation we could directly apply them to the real robot.
-> In practice, as you will see, tweaks need to be done.
+> In practice, as you will see, some tweaks are always needed.
 
 For detailed information regarding the robot model (geometrical and physical properties) visit [this website](https://github.com/jeguzzi/mighty-thymio/blob/master/client.md#robot-parameters)
 
@@ -97,32 +97,39 @@ This package includes:
 
 ## Homework assignment
 
-> Disclaimer: This homework assignment **will be graded**.
+> Note: this homework assignment **will be graded**.
 
 
-(**compulsory**) With Gazebo and the simulated MyT:
+**Compulsory tasks** using Gazebo and the simulated MyT:
 
-1. Write an open loop controller that moves the MyT in such a way that it follows an "8" trajectory. Use the `empty` world file.
+1. Write an open loop controller that moves the MyT in such a way that it follows an "8" trajectory. Test it in the `empty` world file.
 
-2. Using the `wall` world file write a controller to move the MyT towards a wall somewhere in front of it; the wall is not necessarily orthogonal to the direction the MyT is originally pointing to.  Write a contrexcersieoller in such a way that the MyT moves straight ahead until it is close to the wall (without hitting the wall), then turns in such a way to face the wall.
+2. Using the `wall` world file write a controller to move the MyT straight ahead; we assume the robot is heading towards a wall somewhere in front of it; the wall is not necessarily orthogonal to the direction the MyT is originally pointing to.  Write a controller in such a way that the MyT moves straight ahead until it is close to the wall (without hitting the wall), then turns in place in such a way to face the wall as precisely as possible (i.e., the robot's x axis should be orthogonal to the wall).  In order to sense the wall orientation once you are close to it, you should use the proximity sensors.  Feel free to define a convenient distance threshold at which you decide to stop.
 
-3. Using the controller built in *task 2*, once the MyT arrives close to the wall, it  now turns in such a way that it is facing opposite to the wall, then moves in such a way that its reference frame (i.e. `base_link` in `tf` tree) is as close as possible to 2 meters from the wall.
+3. Using the controller built in *task 2*, once the MyT arrives close to the wall, it should then turn in such a way that it is facing opposite to the wall, then move and stop in such a way that its reference frame (i.e. `base_link` in `tf` tree) is as close as possible to a point that is 2 meters from the wall.  Note that the proximity sensors don't have such a long range, so at some point you'll have to rely on odometry.
 
-For *task 1* we request (in addition to the code) an `rviz` snapshot of the `odometry visualization` trace.
+**Optional tasks** using the real MyT (to be used in the real world)
 
-*Tasks 2 and 3* require the use of the proximity sensors. Using this information, feel free to define a *close to the wall* distance threshold.
+4. Test *task 1* on a flat floor. How does the resulting trajectory compare to the trajectory you found in simulation?
 
-(**Optional**) With the real world and the real MyT:
+5. Test *task 2* against a generic wall-like obstacle (e.g. a wall). How precise is the final angle you reach?
+Test your controller using walls of different colors, and also a wall that has a non-uniform color. The most extreme case is the case in which the thymio is facing the wall at a point, and the wall is black on one side of this point and white on the other side.
 
-4. Test *task 1* on a real flat surface. How does the resulting trajectory compare to the one from simulation?
+*Tasks 4 and 5* may require tuning of parameters to improve the performance of the controllers.  We encourage to compare the performance of the controllers with (if needed) and without tuning.
 
-5. Test *task 2* against a generic wall-like obstacle (e.g. a wall). How *close to the wall* to the wall does the real MyT get?
-In addition, test your controller with the real MyT facing orthogonally to the midpoint of a *B&W wall-like* (half black,  half white).
-
-*Tasks 4 and 5* could require tuning of parameters to improve the performance of the controllers. We encourage to compare the performance of the controllers with (if needed) and without tuning. In addition to the code, we request a short animation (e.g. video, GIF) of the real MyT while executing *tasks 4 and 5*. Bare in mind the size of the animation file.
 
 ### Submission
 
-> **Note:** You can do this homework assignment in pairs.
+> **Note:** students should work in pairs for this assignment; first, enroll in a group with your mate (there is a link for that on iCorsi).  If you are working alone, enroll in a 1-person group.  In any case, you'll submit as a group (a single submission per group is required).
 
-Please submit the archive of the package folder to `iCorsi` by **deadline-to-be-defined** , named in the following way: `firstname1.lastname1-firstname2.lastname2.zip`.
+The submission should contain:
+* The full code you implemented (package folder), including brief instructions on how to run and test it.
+* A brief document stating, for each task:
+    * whether your solution implements it;
+    * if yes, whether you still have any doubts/questions/puzzling behavior in your solution
+    * if no, which problems you encountered
+    * any additional comments or notes, including any extra work or experiments you did; feel free to attach screenshots or video links.
+* For *task 1*, an `rviz` snapshot of the `odometry visualization` trace.
+* For *tasks 4 and 5*, a short animation (e.g. video, GIF) of the real MyT while executing your controller.  Bear in mind the size of the animation file (or include a link to the file on dropbox/wetransfer).
+
+Deadline: **Friday May 4 8h30 Lugano time**
