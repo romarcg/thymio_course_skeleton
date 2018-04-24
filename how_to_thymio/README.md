@@ -64,9 +64,9 @@ Follow the next steps to bring up the MyT software (OS and ROS):
 
 1. Turn up the switch on the right of the main computer. 
 
- > Two LEDs on top of the main computer will turn on and a sound will play. Red LED indicates that the switch is up, blue LED indicates that the computer is *operating*.
+ > Two LEDs on top of the main computer will turn on and a sound will play. Red LED indicates that the switch is up, blue LED indicates that the computer is *operating*.  The system will go through some phases where different leds light up.
  
-2. Wait until the `back` arrow on the base starts to blink red.
+2. Wait until the red led on the `back` arrow on the base starts to blink (the whole boot process should take about 1 minute).
    1. If the LED is blinking it means ROS is ready.
    2. If there is no blinking, something went wrong (see [fix](#appendices) for corruption error or request help).
 
@@ -104,11 +104,11 @@ To change the network mode:
 
 To properly power-off the MyT:
 
-1. Press and hold the `back` arrow (about 5s) until a sound is played. This will start the shutdown process of both the base and the main computer.
-2. Wait until the base restarts (there will be a short sound). This will be an indication that the main computer has turned-down correctly. Additionally, verify that only the red LED on top of the main computer is on, the blue one should be off.
+1. Press and hold the `back` arrow (about 5s) until a descending tune is played and the base turn off. This will start the shutdown process of the main computer.
+2. Wait until the base restarts (there will be an ascending tune). This will be an indication that the main computer has turned-off correctly. Additionally, verify that only the red LED on top of the main computer is on, the blue one should be off.
 > As the base has restarted, the lights on the base should be on.  This is expected.
 3. At this point turn down the main switch of the main computer.
-4. Press and hold the middle button on the base until this is switched off. A sound will be triggered and the lights on the base will turn off.
+4. Press and hold the middle button on the base until the base is switched off. A descending tune will be played and the lights on the base will turn off.  The MyT is now off.
 
 
 ## Update the MyT software
