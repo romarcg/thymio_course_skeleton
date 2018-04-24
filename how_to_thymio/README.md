@@ -9,14 +9,16 @@ What is included?
 1. Thymio base
 2. Main computer block compose of:
 
- a. computer section 
- b. connection wires 
- c. support blocks (lego pieces)
+  a. computer section 
+  b. connection wires 
+  c. support blocks (lego pieces)
 
 3. Battery pack 
 4. Wireless antenna 
 
 ### Steps to assemble the MyT
+
+> Before assembling **verify** that printed number on the base, wifi antenna and main computer are the same.
 
 1. Pull of the parts from the box.
 > If the support blocks are detached, follow the images in the appendices section to put them back together. **Do not** continue with the assembling process until the support blocks are properly connected.
@@ -48,6 +50,7 @@ The assembled MyT should look like as depicted:
 ![Assembled MyT](assembled_myt.png)
 
 Once the MyT is assembled, a led on top of the switch in main computer will turn on. 
+
 
 ## Power on:
 
