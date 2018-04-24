@@ -29,13 +29,17 @@ What is included?
 
 ![Connect to wire base](mount2.png)
 
-4. Insert the battery pack in the space between the main computer and the base:
+4. Connect the wifi antena to the main computer:
 
-![Insert battery pack](mount3.png)
+![Connect to wire base](mount3.png)
 
-5. Connect the power wire (coming from the main computer) to the battery pack:
+5. Insert the battery pack in the space between the main computer and the base:
 
-![Connect battery pack](mount4.png)
+![Insert battery pack](mount4.png)
+
+6. Connect the power wire (coming from the main computer) to the battery pack:
+
+![Connect battery pack](mount5.png)
 
 The assembled MyT should look like as depicted:
 
@@ -87,7 +91,7 @@ To change the network mode:
 
 ## Turn off:
 
-> **An improper turn-off could result in a corrupted turn-on process**
+> **Improperly turning-off the MyT could result in a corrupted turn-on process**
 
 To properly turn-off the MyT:
 
