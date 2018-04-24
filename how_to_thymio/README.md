@@ -8,7 +8,7 @@ What is included?
 
 1. Thymio base
 2. Main computer block compose of:
-   1. Computer section
+   1. Main computer
    2. Connection wires 
    3. Support blocks (lego pieces)
 3. Battery pack 
@@ -16,13 +16,18 @@ What is included?
 
 ### Steps to assemble the MyT
 
-> Before starting assembling **verify** that the printed number on the base, wifi antenna and main computer are the same.
+Before starting the assemble process **verify** that:
+
+1. The printed numbers on the base, wifi antenna and main computer are the same. If this is not the case look for the correct one or request help.
+2. The switch on the right of the main computer is **turned down**.
+
+To assemble the MyT follow the next steps:
 
 1. Carefully pull off the parts from the box.
 
 > If the support blocks are detached, follow the images in the [appendices](#appendices) section to put them back together. **Do not** continue with the assembling process until the support blocks are properly connected.
 
-2. Mount the computer block on top of the Thymio base:
+2. Mount the main computer block on top of the Thymio base:
 
 ![Mounting computer on base](mount1.png)
 
@@ -32,7 +37,7 @@ What is included?
 
 ![Connect to wire base](mount2.png)
 
-4. Connect the wifi antena to the main computer:
+4. Connect the wifi antenna to the main computer:
 
 ![Connect to wire base](mount3.png)
 
@@ -48,25 +53,24 @@ The assembled MyT should look like as depicted:
 
 ![Assembled MyT](assembled_myt.png)
 
-Once the MyT is assembled, a led on top of the switch in main computer will turn on. 
+Once the MyT is assembled, a LED on top of the switch in main computer will turn on. 
 
 
 ## Power on:
 
 > MyT has 3 power sources: in the base base, by the side of the main computer (mark with the MyT number), and the external battery pack. **Before running any experiment be sure to have the battery pack properly charged.**
 
-
-Follow these steps to bring up the MyT:
+Follow the next steps to bring up the MyT software (OS and ROS):
 
 1. Turn up the switch on the right of the main computer. 
 
- > Two leds on top of the main computer will turn on and a sound will trigger. Red led indicates the switch is up, blue led indicates the computer is *working*.
+ > Two LEDs on top of the main computer will turn on and a sound will trigger. Red LED indicates that the switch is up, blue LED indicates that the computer is *working*.
  
 2. Wait until the `back` arrow on the base starts to blink red.
-   1. Once it is blinking it means ROS system inside the MyT is ready.
-   2. If there is no blinking, something went wrong (see fix for corruption error)
+   1. If the LED is blinking it means ROS is ready.
+   2. If there is no blinking, something went wrong (see fix for corruption error or request help).
 
-> There three body leds ( one at the top and two at the sides). If the LEDs are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources critically low.
+> There are three body LEDs indicators on the base, one at the top and two at the sides. If the LEDs are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources are critically low.
 
 ## Connect to the real MyT
 
@@ -95,14 +99,14 @@ To change the network mode:
 2. Press the `left` arrow to select a mode (down off, down-left AP, left . 
 3. Press the `middle` button to confirm the selection.
 
-## Turn off:
+## Power off:
 
-> **Improperly turning-off the MyT could result in a corrupted turn-on process**
+> **Improperly powering-off the MyT could result in a corrupted power-on process**
 
-To properly turn-off the MyT:
+To properly power-off the MyT:
 
 1. Press and hold the `back` arrow (about 5s) until a sound triggers. This will start the shutdown process of both the base and the main computer.
-2. Wait until the base restarts (there will be a short sound). This will be an indication that the main computer has turned-down correctly. Additionally, verify that only the red led on top of the main computer is on, the blue one should be off.
+2. Wait until the base restarts (there will be a short sound). This will be an indication that the main computer has turned-down correctly. Additionally, verify that only the red LED on top of the main computer is on, the blue one should be off.
 > As the base has restarted lights should be on (this is normal).
 3. At this point turn down the main switch of the main computer.
 4. Press and hold the middle button on the base until this is switched off. A sound will trigger and the lights will turn off.
