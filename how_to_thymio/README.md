@@ -1,13 +1,13 @@
-## Mighty Thymio (MyT) how to:
+# Mighty Thymio (MyT) how to:
 
-## Assemblage 
+## Assembly 
 
 What is included?
 
 ![MyT package](whats_included.png)
 
 1. Thymio base
-2. Main computer block compose of:
+2. Main computer block composed of:
    1. Main computer
    2. Connection wires 
    3. Support blocks (lego pieces)
@@ -16,7 +16,7 @@ What is included?
 
 ### Steps to assemble the MyT
 
-Before starting the assemble process **verify** that:
+Before starting the assemble process **carefully verify** that:
 
 1. The printed numbers on the base, wifi antenna and main computer are the same. If this is not the case look for the correct one or request help.
 2. The switch on the right of the main computer is **turned down**.
@@ -58,13 +58,13 @@ Once the MyT is assembled, a LED on top of the switch in main computer will turn
 
 ## Power on:
 
-> MyT has 3 power sources: in the base base, by the side of the main computer (mark with the MyT number), and the external battery pack. **Before running any experiment be sure to have the battery pack properly charged.**
+> MyT has 3 power sources: one in the thymio base, one besides the main computer (mark with the MyT number), and the white external battery pack. **Before running any experiment be sure to have the battery pack properly charged.**  The battery pack can be charged with any micro-usb cable.
 
 Follow the next steps to bring up the MyT software (OS and ROS):
 
 1. Turn up the switch on the right of the main computer. 
 
- > Two LEDs on top of the main computer will turn on and a sound will be triggered. Red LED indicates that the switch is up, blue LED indicates that the computer is *working*.
+ > Two LEDs on top of the main computer will turn on and a sound will play. Red LED indicates that the switch is up, blue LED indicates that the computer is *operating*.
  
 2. Wait until the `back` arrow on the base starts to blink red.
    1. If the LED is blinking it means ROS is ready.
@@ -85,7 +85,7 @@ Each MyT creates its own access point (AP) with the name `thymioX`, where `X` is
 
 > All exposed topics from the ROS controller follow the convention `/thymioX/topic_name`.
 
-## Change network mode:
+## Change network mode (advanced):
 
 MyT has three network modes: off, AP (default) and managed. Managed mode will connect to a predefined access point. 
 
@@ -98,20 +98,20 @@ To change the network mode:
 2. Press the `left` arrow to select a mode (down off, down-left AP, left . 
 3. Press the `middle` button to confirm the selection.
 
-## Power off:
+## Power off (important!)
 
-> **Improperly powering-off the MyT could result in a corrupted power-on process**
+> **Improperly powering-off the MyT could result in a corrupted storage, which creates problems during the power-on process**
 
 To properly power-off the MyT:
 
-1. Press and hold the `back` arrow (about 5s) until a sound is triggered. This will start the shutdown process of both the base and the main computer.
+1. Press and hold the `back` arrow (about 5s) until a sound is played. This will start the shutdown process of both the base and the main computer.
 2. Wait until the base restarts (there will be a short sound). This will be an indication that the main computer has turned-down correctly. Additionally, verify that only the red LED on top of the main computer is on, the blue one should be off.
-> As the base has restarted lights should be on (this is normal).
+> As the base has restarted, the lights on the base should be on.  This is expected.
 3. At this point turn down the main switch of the main computer.
-4. Press and hold the middle button on the base until this is switched off. A sound will be triggered and the lights will turn off.
+4. Press and hold the middle button on the base until this is switched off. A sound will be triggered and the lights on the base will turn off.
 
 
-## Update software in MyT
+## Update the MyT software
 
 > This process is only for internal development **do not** use it unless it is explicitly requested.
 
