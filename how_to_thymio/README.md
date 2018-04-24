@@ -135,4 +135,31 @@ Different views of the support blocks
 
 ### Corruption error fix
 
-(TO DO)
+#### If after powering on the MyT is not blinking
+
+ 1. Check that all cable are connected
+ 2. Login to the thymio via ssh `root@thymioX` (odroid)
+ 3. Check that docker is up
+     
+```bash
+      systemctl status docker```
+      
+     If not, reset docker:
+     
+```bash
+      systemctl stop docker
+      rm -r /var/lib/docker/runtimes
+      rm -r /var/lib/docker/containers/*
+      systemctl start docker
+      source /root/docker/mighty-thymio/do_update.sh```
+      
+ 4. check that the services are up
+     
+```bash
+      cd docker/mighty-thymio
+      docker-compose ps```
+      
+     If not, recreate them:
+     
+```bash
+      source do_update.sh```
