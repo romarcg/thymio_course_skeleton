@@ -64,34 +64,33 @@ Follow the next steps to bring up the MyT software (OS and ROS):
 
 1. Turn up the switch on the right of the main computer. 
 
- > Two LEDs on top of the main computer will turn on and a sound will trigger. Red LED indicates that the switch is up, blue LED indicates that the computer is *working*.
+ > Two LEDs on top of the main computer will turn on and a sound will be triggered. Red LED indicates that the switch is up, blue LED indicates that the computer is *working*.
  
 2. Wait until the `back` arrow on the base starts to blink red.
    1. If the LED is blinking it means ROS is ready.
-   2. If there is no blinking, something went wrong (see fix for corruption error or request help).
+   2. If there is no blinking, something went wrong (see [fix](#appendices) for corruption error or request help).
 
-> There are three body LEDs indicators on the base, one at the top and two at the sides. If the LEDs are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources are critically low.
+> There are three body LEDs indicators in the base, one at the top and two at the sides. If the LEDs are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources are critically low.
 
 ## Connect to the real MyT
 
 Each MyT creates its own access point (AP) with the name `thymioX`, where `X` is the number printed on the stickers.
 
-1. Connect to the corresponding AP. Password is `idsia1234`
+1. Connect to the corresponding MyT AP (key is `idsia1234`).
 2. Setup the environment variable to reach the ROS master in the MyT. 
 
 `export ROS_MASTER_URI=http://thymioX:11311`
 
-3. As a simple verification, run `rostopic list` to confirm that the connection was done properly. A list of topics from the corresponding MyT should appear, e.g. `/thymioX/odom`
+3. As a simple verification, run `rostopic list` to confirm that the connection was done properly. A list of topics from the corresponding MyT should appear, e.g. `/thymioX/odom`.
 
-> All exposed topics from the ROS controller follow the convention `/thymioX/topic_name` 
-
-
+> All exposed topics from the ROS controller follow the convention `/thymioX/topic_name`.
 
 ## Change network mode:
 
-MyT has three network modes, off, AP (default) and managed. managed mode will connect to a predefined access point named.
+MyT has three network modes: off, AP (default) and managed. Managed mode will connect to a predefined access point. 
+
 > Internet connection is not present in AP mode. If internet connection is needed while in AP mode, an Ethernet cable (with internet connection) must be attached to the main computer.
-> Custom mode should only be used when the predefined access point is present.
+> Managed mode should only be used when the predefined access point is present.
 
 To change the network mode:
 
@@ -105,14 +104,14 @@ To change the network mode:
 
 To properly power-off the MyT:
 
-1. Press and hold the `back` arrow (about 5s) until a sound triggers. This will start the shutdown process of both the base and the main computer.
+1. Press and hold the `back` arrow (about 5s) until a sound is triggered. This will start the shutdown process of both the base and the main computer.
 2. Wait until the base restarts (there will be a short sound). This will be an indication that the main computer has turned-down correctly. Additionally, verify that only the red LED on top of the main computer is on, the blue one should be off.
 > As the base has restarted lights should be on (this is normal).
 3. At this point turn down the main switch of the main computer.
-4. Press and hold the middle button on the base until this is switched off. A sound will trigger and the lights will turn off.
+4. Press and hold the middle button on the base until this is switched off. A sound will be triggered and the lights will turn off.
 
 
-## Update software in thymio (ONLY FOR INTERNAL DEVELOPMENT):
+## Update software in MyT
 
 > This process is only for internal development **do not** use it unless it is explicitly requested.
 
@@ -121,6 +120,8 @@ To properly power-off the MyT:
 3. Updating process will take about 2min. When the updating process is finished, the MyT will restart.
 
 ## <a name="appendices"></a>Appendices
+
+### Support blocks
 
 Different views of the support blocks 
 
@@ -132,4 +133,6 @@ Different views of the support blocks
 
 ![Support blocks](lego_side2.png)
 
+### Corruption error fix
 
+(TO DO)
