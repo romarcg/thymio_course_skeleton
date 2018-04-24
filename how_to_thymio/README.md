@@ -62,9 +62,8 @@ Follow these steps to bring up the MyT:
  > Two leds on top of the main computer will turn on and a sound will trigger. Red led indicates the switch is up, blue led indicates the computer is *working*.
  
 2. Wait until the `back` arrow on the base starts to blink red.
-
-  a. Once it is blinking it means ROS system inside the MyT is ready.
-  b. If there is no blinking, something went wrong (see fix for corruption error)
+   1. Once it is blinking it means ROS system inside the MyT is ready.
+   2. If there is no blinking, something went wrong (see fix for corruption error)
 
 > There three body leds ( one at the top and two at the sides). If the LEDs are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources critically low.
 
@@ -117,10 +116,12 @@ To properly turn-off the MyT:
 
 Different views of the support blocks 
 
-![Side suppor blocks](blocks_side1.png)
+![Support blocks](lego_front.png)
 
-![Side suppor blocks](blocks_side2.png)
+![Support blocks](lego_back.png)
 
-![Side suppor blocks](blocks_back3.png)
+![Support blocks](lego_side1.png)
+
+![Support blocks](lego_side2.png)
 
 
