@@ -53,18 +53,18 @@ The assembled MyT should look like as depicted:
 
 ![Assembled MyT](assembled_myt.png)
 
-Once the MyT is assembled, a LED on top of the switch in main computer will turn on. 
+Once the MyT is assembled, pull the battery out a couple of centimeters and push the small button on the side of the battery; a few leds on the battery will light up to indicate its charge level.  Always make sure the external battery pack is properly charged, otherwise the system may be unstable.  If the system is properly assembled, a blue LED on top of the switch in main computer should turn on. 
 
 
 ## Power on:
 
-> MyT has 3 power sources: one in the thymio base, one besides the main computer (mark with the MyT number), and the white external battery pack. **Before running any experiment be sure to have the battery pack properly charged.**  The battery pack can be charged with any micro-usb cable.
+> MyT has 3 power sources: one in the thymio base, one silver battery pack besides the main computer (mark with the MyT number), and the white external battery pack. **Before running any experiment make sure the external battery pack is properly charged.**  The battery pack can be charged with any micro-usb cable.
 
 Follow the next steps to bring up the MyT software (OS and ROS):
 
 1. Turn up the switch on the right of the main computer. 
 
- > Two LEDs on top of the main computer will turn on and a sound will play. Red LED indicates that the switch is up, blue LED indicates that the computer is *operating*.  The system will go through some phases where different leds light up.
+ > Two LEDs on top of the main computer will turn on and an ascending tune will play. The fixed red LED indicates that the switch is up, the blinking blue LED indicates that the computer is *operating*.  The system will go through some phases where different leds light up on the thymio base.
  
 2. Wait until the red led on the `back` arrow on the base starts to blink (the whole boot process should take about 1 minute).
    1. If the LED is blinking it means ROS is ready.
