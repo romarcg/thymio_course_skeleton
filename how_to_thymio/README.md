@@ -33,7 +33,7 @@ To assemble the MyT follow the next steps:
 
 > Use the lego marks on top of the base as a guide.
 
-3. Connect the usb-to-mini-usb wire from the main computer to the base:
+3. Connect the usb-to-micro-usb wire from the main computer to the base:
 
 ![Connect to wire base](mount2.png)
 
