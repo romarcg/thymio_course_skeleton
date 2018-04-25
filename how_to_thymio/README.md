@@ -66,11 +66,16 @@ Follow the next steps to bring up the MyT software (OS and ROS):
 
  > Two LEDs on top of the main computer will turn on and an ascending tune will play. The fixed red LED indicates that the switch is up, the blinking blue LED indicates that the computer is *operating*.  The system will go through some phases where different leds light up on the thymio base.
  
-2. Wait until the red led on the `back` arrow on the base starts to blink (the whole boot process should take about 1 minute).
+2. Wait until the red led on the `back` arrow on the base starts to blink (*heartbeat*).  This should happen within about 90 seconds from switching the odroid on.
    1. If the LED is blinking it means ROS is ready.
-   2. If there is no blinking, something went wrong (see [fix](#appendices) for corruption error or request help).
+   2. If there is no blinking, something went wrong (see [fix](#appendices) for corruption error or to request help).
 
 > There are three body LEDs indicators in the base, one at the top and two at the sides. If the LEDs are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources are critically low.
+
+## Simple troubleshooting fix
+If at any point in time the main computer is on but there is no heartbeat on the thymio base, try disconnecting the microusb cable fromt he back of the thymio, waiting a few seconds, reconnecting the cable carefully, then waiting about 20 seconds.  
+
+If the heartbeat does not return within about 20 seconds, you should turn off the main computer switch (down position), turn off the thymio, and try restarting the main computer from scratch.  If this also fails, request help and check [troubleshooting](#appendices).
 
 ## Connect to the real MyT
 
@@ -137,29 +142,34 @@ Different views of the support blocks
 
 #### If after powering on the MyT is not blinking
 
- 1. Check that all cable are connected
- 2. Login to the thymio via ssh `root@thymioX` (odroid)
- 3. Check that docker is up
+Check that all cables are connected
+
+Login to the thymio via ssh `root@thymioX` (pw: odroid)
+
+Check that docker is up
      
 ```bash
-      systemctl status docker```
-      
-     If not, reset docker:
+      systemctl status docker
+```
+If not, reset docker:
      
 ```bash
       systemctl stop docker
       rm -r /var/lib/docker/runtimes
       rm -r /var/lib/docker/containers/*
       systemctl start docker
-      source /root/docker/mighty-thymio/do_update.sh```
-      
- 4. check that the services are up
+      source /root/docker/mighty-thymio/do_update.sh
+```
+
+Check that the services are up
      
 ```bash
       cd docker/mighty-thymio
-      docker-compose ps```
-      
-     If not, recreate them:
+      docker-compose ps
+```
+
+If not, recreate them:
      
 ```bash
-      source do_update.sh```
+      source do_update.sh
+```
