@@ -35,6 +35,8 @@ The following are the most important parameters of the (real) MyT:
   - max pitch: 1.3 rad
 
 
+> More details regarding the thymio base (e.g. schematics, electronics) can be found [here](https://www.thymio.org/en:thymiospecifications). A special software is needed to visualize the schematics (for example blender).
+
 ## Gazebo
 
 [Gazebo](http://gazebosim.org/) is a robot simulator. Simulators are used in robotics for many reasons, one of which is to evaluate algorithms without depending on the real robot or on the specific environment. In many applications it is essential to test robot capabilities, such as error handling, resource management, perception, localization, navigation and grasping.

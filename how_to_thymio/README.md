@@ -14,6 +14,7 @@ What is included?
 3. Battery pack 
 4. Wireless antenna 
 
+
 ### Steps to assemble the MyT
 
 Before starting the assemble process **carefully verify** that:
@@ -73,11 +74,13 @@ Follow the next steps to bring up the MyT software (OS and ROS):
 > There are three body LEDs indicators in the base, one at the top and two at the sides. If the LEDs are green it means external battery is connected; yellow means external battery is not connected but there is still power in internal sources; red means internal sources are critically low.
 
 ## Simple troubleshooting fix
-If at any point in time the main computer is on but there is no heartbeat on the thymio base, try disconnecting the microusb cable fromt he back of the thymio, waiting a few seconds, reconnecting the cable carefully, then waiting about 20 seconds.  
+If at any point in time the main computer is on but there is no heartbeat on the thymio base, try disconnecting the microusb cable fromt he back of the thymio, waiting a few seconds, reconnecting the cable carefully, then waiting about 20 seconds. 
 
 If the heartbeat does not return within about 20 seconds, you should turn off the main computer switch (down position), turn off the thymio, and try restarting the main computer from scratch.  If this also fails, request help and check [troubleshooting](#appendices).
 
 ## Connect to the real MyT
+
+> If the machine trying to connect to the MyT is in a virtual machine. Verify that the network setting of this machine is set to **bridged mode**. 
 
 Each MyT creates its own access point (AP) with the name `thymioX`, where `X` is the number printed on the stickers.
 
@@ -89,6 +92,30 @@ Each MyT creates its own access point (AP) with the name `thymioX`, where `X` is
 3. As a simple verification, run `rostopic list` to confirm that the connection was done properly. A list of topics from the corresponding MyT should appear, e.g. `/thymioX/odom`.
 
 > All exposed topics from the ROS controller follow the convention `/thymioX/topic_name`.
+
+4. Step 2 (verified in step 3) configures a one-way communication. This means one can receive data from the remote ROS master (in the MyT). If one wants to send data (publish topics) to the ROS master another environment variable needs to be setup:
+
+`export ROS_MASTER_URI=my-ip-address`
+
+where `my-ip-address` is the address is the IP address of the computer sending data (the local machine). To display the address of the local machine use `ifconfig -a` command, it should look like `192.168.168.XXX`
+
+5. Verify that data can be send, publish a command velocity to the topic `/thymioX/cmd_vel`:
+
+```bash
+rostopic pub /thymioX/cmd_vel geometry_msgs/Twist 
+  x: 0.1
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.0"
+```
+If everything is well setup the MyT should start moving forward.
+
+> If a restart of the odometry data (`/thymioX/odom`)is needed, unplug and plug again the usb-to-micro-usb wire from the main computer to the base.
+
+> **Important:** remember to change back the values of `ROS_MASTER_URI` and `ROS_IP` if you want to use your local rosmaster (e.g. the simulator): `export ROS_MASTER_URI=http://localhost:11311` and `export ROS_IP=`
 
 ## Change network mode (advanced):
 
