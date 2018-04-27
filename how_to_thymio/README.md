@@ -97,9 +97,9 @@ Each MyT creates its own access point (AP) with the name `thymioX`, where `X` is
 
 `export ROS_MASTER_URI=my-ip-address`
 
-where `my-ip-address` is the address is the IP address of the computer sending data (the local machine). To display the address of the local machine use `ifconfig -a` command, it should look like `192.168.168.XXX`
+where `my-ip-address` is the IP address of the computer sending data (the local machine). To display the IP address of the local machine use `ifconfig -a` command, it should look like `192.168.168.XXX`
 
-5. Verify that data can be send, publish a command velocity to the topic `/thymioX/cmd_vel`:
+5. Verify that data can be sent, publish a velocity command to the topic `/thymioX/cmd_vel`:
 
 ```bash
 rostopic pub /thymioX/cmd_vel geometry_msgs/Twist 
@@ -113,7 +113,7 @@ angular:
 ```
 If everything is well setup the MyT should start moving forward.
 
-> If a restart of the odometry data (`/thymioX/odom`)is needed, unplug and plug again the usb-to-micro-usb wire from the main computer to the base.
+> If a restart of the odometry data (`/thymioX/odom`) is needed, unplug and plug again the usb-to-micro-usb wire from the main computer to the base.
 
 > **Important:** remember to change back the values of `ROS_MASTER_URI` and `ROS_IP` if you want to use your local rosmaster (e.g. the simulator): `export ROS_MASTER_URI=http://localhost:11311` and `export ROS_IP=`
 
