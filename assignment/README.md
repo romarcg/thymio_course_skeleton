@@ -94,44 +94,6 @@ Download `thymio_course_skeleton` [package](https://github.com/romarcg/thymio_co
 This package includes:
 1. Launch files to bring up gazebo simulator and MyT model.
 2. Launch files to visualize MyT topics in `rviz`.
-3. A basic skeleton python script to interact with the simulated MyT.
+3. A basic skeleton node (python script) to interact with the simulated MyT.
 4. Extra resources needed for the homework assignment.
 
-## Homework assignment
-
-> Note: this homework assignment **will be graded**.
-
-
-**Compulsory tasks** using Gazebo and the simulated MyT:
-
-1. Write an open loop controller that moves the MyT in such a way that it follows an "8" trajectory. Test it in the `empty` world file.
-
-2. Using the `wall` world file write a controller to move the MyT straight ahead; we assume the robot is heading towards a wall somewhere in front of it; the wall is not necessarily orthogonal to the direction the MyT is originally pointing to.  Write a controller in such a way that the MyT moves straight ahead until it is close to the wall (without hitting the wall), then turns in place in such a way to face the wall as precisely as possible (i.e., the robot's x axis should be orthogonal to the wall).  In order to sense the wall orientation once you are close to it, you should use the proximity sensors.  Feel free to define a convenient distance threshold at which you decide to stop.
-
-3. Using the controller built in *task 2*, once the MyT arrives close to the wall, it should then turn in such a way that it is facing opposite to the wall, then move and stop in such a way that its reference frame (i.e. `base_link` in `tf` tree) is as close as possible to a point that is 2 meters from the wall.  Note that the proximity sensors don't have such a long range, so at some point you'll have to rely on odometry.
-
-**Optional tasks** using the real MyT (to be used in the real world)
-
-4. Test *task 1* on a flat floor. How does the resulting trajectory compare to the trajectory you found in simulation?
-
-5. Test *task 2* against a generic wall-like obstacle (e.g. a wall). How precise is the final angle you reach?
-Test your controller using walls of different colors, and also a wall that has a non-uniform color. The most extreme case is the case in which the thymio is facing the wall at a point, and the wall is black on one side of this point and white on the other side.
-
-*Tasks 4 and 5* may require tuning of parameters to improve the performance of the controllers.  We encourage to compare the performance of the controllers with (if needed) and without tuning.
-
-
-### Submission
-
-> **Note:** students should work in pairs for this assignment; first, enroll in a group with your mate (there is a link for that on iCorsi).  If you are working alone, enroll in a 1-person group.  In any case, you'll submit as a group (a single submission per group is required).
-
-The submission should contain:
-* The full code you implemented (package folder), including brief instructions on how to run and test it.
-* A brief document stating, for each task:
-    * whether your solution implements it;
-    * if yes, whether you still have any doubts/questions/puzzling behavior in your solution
-    * if no, which problems you encountered
-    * any additional comments or notes, including any extra work or experiments you did; feel free to attach screenshots or video links.
-* For *task 1*, an `rviz` snapshot of the `odometry visualization` trace.
-* For *tasks 4 and 5*, a short animation (e.g. video, GIF) of the real MyT while executing your controller.  Bear in mind the size of the animation file (or include a link to the file on dropbox/wetransfer).
-
-Deadline: **Friday May 4 8h30 Lugano time**
