@@ -74,20 +74,34 @@ controller                                      camera pitch
 
 As we use messages and services to communicate, we can employ all tools from ROS ecosystem.
 
-> In theory, once we are satisfied with the performance of our modules
+> Ideally, once we are satisfied with the performance of our modules
 > running in simulation we could directly apply them to the real robot.
-> In practice, as you will see, some tweaks are always needed.
+> In practice, as you will see, some tweaks are often needed.
 
 For detailed information regarding the robot model (geometrical and physical properties) visit [this website](https://github.com/jeguzzi/mighty-thymio/blob/master/client.md#robot-parameters)
 
 
 ### Install Gazebo MyT model and plugins
 
-Refer to [MyT interface repository](https://github.com/jeguzzi/mighty-thymio/blob/master/client.md)
+Install the following ROS packages in your `catkin workspace`:
 
-Be aware that the example for `Teleoperate the robot with a joypad` needs a joypad to work properly.
+```
+cd <your catkin workspace>/src
+git clone https://github.com/jeguzzi/thymioid.git --branch client
+git clone https://github.com/jeguzzi/ros-aseba.git --branch client
+catkin build
+```
 
-### Install Utility ROS package
+Test the installation of the simulated robot by executing:
+
+`roslaunch thymioid_description test_gazebo_bringup.launch`
+
+
+Refer to [MyT interface repository](https://github.com/jeguzzi/mighty-thymio/blob/master/client.md) repository for more details regarding the MyT software and interface. This repository includes information and code for both real and simulated MyT.
+
+> Note: Be aware that the example in **Teleoperate the robot with a joypad** needs a joypad to work properly.
+
+### Install skeleton ROS package for the simulated MyT
 
 Download `thymio_course_skeleton` [package](https://github.com/romarcg/thymio_course_skeleton) for a first glance at how to interact with simulated MyT.
 
