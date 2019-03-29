@@ -1,6 +1,6 @@
 ## Skeleton files to bring up gazebo and the Mighty Thymio model
 
-Add and install the `thymio_course_skeleton` package to your `your_catkin_workspace`:
+Add the `thymio_course_skeleton` package to your `your_catkin_workspace`:
 
 ```
 cd <your_catkin_workspace>/src
