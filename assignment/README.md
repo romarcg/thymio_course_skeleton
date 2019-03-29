@@ -94,7 +94,11 @@ catkin build
 
 Test the installation of the simulated robot by executing:
 
-`roslaunch thymioid_description test_gazebo_bringup.launch`
+`roslaunch thymioid_description test_gazebo_bringup.launch name:=thymioXX`
+
+where `thymioXX` is the name you will give to the simulated MyT. This name is used as base name for topics that interact with the MyT.
+
+> By default some options of the simulated MyT are not enabled, e.g. the camera sensor. You can select the desired features of the simulated MyT by enabling such options in the `test_gazebo_bringup.launch` file (`args`).
 
 
 Refer to [MyT interface repository](https://github.com/jeguzzi/mighty-thymio/blob/master/client.md) repository for more details regarding the MyT software and interface. This repository includes information and code for both real and simulated MyT.
